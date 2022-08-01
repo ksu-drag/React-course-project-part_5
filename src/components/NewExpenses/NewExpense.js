@@ -1,9 +1,10 @@
 import React from "react";
-import './NewExpense';
+import './NewExpense.css';
+import ExpenseForm from "./NewForm";
 const NewExpenses = () =>{
     return(
         <div className="new-expense">
-           <form></form>
+           <ExpenseForm/>
         </div>
     )
 }

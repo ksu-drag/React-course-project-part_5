@@ -1,5 +1,5 @@
 import './ExpensesList.css';
-import react from 'react';
+import React from 'react';
 import ExpenseItem from './ExpenseItem';
 
 const ExpenseList  =(props)=>{

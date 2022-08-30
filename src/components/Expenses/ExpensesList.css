@@ -1,0 +1,10 @@
+.no-expenses{
+    padding: 1rem;
+    color: rgb(195, 196, 198);
+    font-weight: lighter;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+}
+
+ 

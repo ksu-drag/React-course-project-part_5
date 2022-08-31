@@ -11,15 +11,6 @@ const ExpenseForm = (props)=> {
     const amountChangeHandler = (e) =>{setEnteredAmount(e.target.value)} ;
     const dateChangeHandler = (e) =>{setEnteredDate(e.target.value)};
 
-    // WE HAVE ANOTHER WAY TO DOING THIS useSTATE(), BUT in this way we should save state value, which dont update and that happned because when one value update, update other state two/ we update them together  
-    // const [userInput, setUserInput] = useState({enteredTitle: '',enteredAmount: '',enterdeDate: '',});
-    // const changeTitle =(e)=>{setUserInput({...userInput,enteredTitle: e.target.value,});console.log(userInput);}//onChange ={changeTitle}
-    // const changeAmount = (e)=>{setUserInput({...userInput,enteredAmount: e.target.value,});console.log(userInput);}//onChange ={changeAmount}
-    // const changeDate =(e)=>{setUserInput({...userInput,enterdeDate: e.target.value,});console.log(userInput);}//onChange ={changeDate}
-    // BUT IF WE DEPEND AT THE PREW STATE, WE SHOULD DO THIS WAY: 
-    // const [userInput, setUserInput] = useState({enteredTitle: '',enteredAmount: '',enterdeDate: '',});
-    // const titleChangeHandler2 =(e)=>{setUserInput((prewState)=>{return{...prewState,enteredTitle: e.target.value,}})}
-
     const submitHandler = (e)=>{
         e.preventDefault();
         const expenseData = {
@@ -50,6 +41,7 @@ const ExpenseForm = (props)=> {
                 </div>
             </div>
             <div className="new-expense__actions">
+                <button type ="button" onClick = {props.onCansel}> Cancel </button>
                 <button type ="submit">Add Expense</button>
             </div>
         </form>
@@ -58,3 +50,13 @@ const ExpenseForm = (props)=> {
 }
 
 export default ExpenseForm;
+
+
+ // WE HAVE ANOTHER WAY TO DOING THIS useSTATE(), BUT in this way we should save state value, which dont update and that happned because when one value update, update other state two/ we update them together  
+    // const [userInput, setUserInput] = useState({enteredTitle: '',enteredAmount: '',enterdeDate: '',});
+    // const changeTitle =(e)=>{setUserInput({...userInput,enteredTitle: e.target.value,});console.log(userInput);}//onChange ={changeTitle}
+    // const changeAmount = (e)=>{setUserInput({...userInput,enteredAmount: e.target.value,});console.log(userInput);}//onChange ={changeAmount}
+    // const changeDate =(e)=>{setUserInput({...userInput,enterdeDate: e.target.value,});console.log(userInput);}//onChange ={changeDate}
+    // BUT IF WE DEPEND AT THE PREW STATE, WE SHOULD DO THIS WAY: 
+    // const [userInput, setUserInput] = useState({enteredTitle: '',enteredAmount: '',enterdeDate: '',});
+    // const titleChangeHandler2 =(e)=>{setUserInput((prewState)=>{return{...prewState,enteredTitle: e.target.value,}})}

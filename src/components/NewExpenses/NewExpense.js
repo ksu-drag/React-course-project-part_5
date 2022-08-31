@@ -1,6 +1,7 @@
 import React from "react";
 import './NewExpense.css';
 import ExpenseForm from "./NewForm";
+import AddExpensesButton from "./AddNewExpensesButton";
 const NewExpenses = (props) =>{
     const saveUserDateFromNewFormHandler =(enteredExpenseData)=>{
         const expenseData = {
@@ -11,7 +12,8 @@ const NewExpenses = (props) =>{
     };
     return(
         <div className="new-expense">
-           <ExpenseForm onRequerUserDateFromNewForm = {saveUserDateFromNewFormHandler}/>
+            <ExpenseForm onRequerUserDateFromNewForm = {saveUserDateFromNewFormHandler}/>
+            <AddExpensesButton></AddExpensesButton>
         </div>
     )
 }
